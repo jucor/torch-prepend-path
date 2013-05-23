@@ -38,7 +38,7 @@ Simply run torch from the shell with
 
 ```bash
 torch -l prepend-path
-```bash
+```
 
 And voila, the content of the environment variable `TORCH_PREPEND_PATH` is prepended at the beginning of your search path for lua files, and the content of t`TORCH_PREPEND_CPATH` to the search path for C files.
 
@@ -56,9 +56,11 @@ Installation
 ---
 
 Either add the file `init.lua` to your torch path, or, simpler, use
-``
+
+```bash
 torch-pkg deploy
-``
+```
+
 at the root of the repository.
 
 
