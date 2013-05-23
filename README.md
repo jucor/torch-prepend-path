@@ -44,13 +44,13 @@ And voila, the content of the environment variable `TORCH_PREPEND_PATH` is prepe
 
 
 #### Alternative
-If you insist on changing your code, you can add
+If you have no control over how torch is called (e.g. within an IDE), you can load prepend-path directly from your code by adding
 
 ```lua
 require 'prepend-path'
-``
+```
 
-at the beginning.
+at the beginning. However, the whole purpose was to avoid having to fiddle with your script in the first place.
 
 Installation
 ---
