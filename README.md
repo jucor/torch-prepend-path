@@ -62,8 +62,3 @@ torch-pkg deploy
 ```
 
 at the root of the repository.
-
-
-Torch search-order
-----
-
