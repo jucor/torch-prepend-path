@@ -24,8 +24,8 @@ The same holds for the C path, using `TORCH_PREPEND_CPATH` -- see [Lua's documen
 In particular, it is now possible to run concurrently two scripts with two different versions of a package without modifying your code, by setting `TORCH_PREPEND_PATH` to different values in your shell before calling torch. For example:
 
 ```bash
-TORCH_PREPEND_PATH=path_to_first_version torch  TORCH_PREPEND_CPATH=path_to_libfiles_of_first_version -l prepend-path myscript.lua &
-TORCH_PREPEND_PATH=path_to_second_version  TORCH_PREPEND_CPATH=path_to_libfiles_of_first_version torch -l prepend-path myscript.lua &
+TORCH_PREPEND_PATH=path_to_first_version TORCH_PREPEND_CPATH=path_to_libfiles_of_first_version torch -l prepend-path myscript.lua &
+TORCH_PREPEND_PATH=path_to_second_version TORCH_PREPEND_CPATH=path_to_libfiles_of_first_version torch -l prepend-path myscript.lua &
 ```
 
 Previously, with the default path ordering, this could only be achieved by having two versions of the script had to medling with `package.path`.
